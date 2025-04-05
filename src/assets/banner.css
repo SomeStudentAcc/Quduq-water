@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+  position: static !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply rounded-full;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #f7f8fa !important;
+  background-image: url("../../public/arrow-right.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  z-index: 20 !important;
+  transition: all 0.3s;
+  opacity: 1 !important;
+}
+
+.swiper-button-next {
+  transform: rotate(-180deg) !important;
+  right: 0% !important;
+  margin-right: -40px !important;
+}
+.swiper-button-prev {
+  left: 0% !important;
+
+  margin-left: -40px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #0072bb !important;
+  background-image: url("../../public/whiteArrow.svg") !important;
+  transform: rotate(180deg);
+  transition: all !important;
+  transition-duration: 150ms !important;
+}
+.swiper-button-prev:hover {
+  transform: rotate(-180deg) !important;
+}
+.swiper-button-next:hover {
+  transform: rotate(0deg) !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: #0072bb !important;
+  width: 20px !important;
+  border-radius: 20px !important;
+  height: 8px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #92b9d2 !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto !important;
+  right: 70% !important;
+}
+
+@media (max-width: 1024px) {
+  .banner .swiper-button-prev,
+  .banner .swiper-button-next {
+    display: none !important;
+  }
+
+}
